@@ -1,0 +1,22 @@
+total 174
+drwxr-xr-x 1 kaush 197609     0 Oct  4 09:56 .
+drwxr-xr-x 1 kaush 197609     0 Oct  3 23:48 ..
+drwxr-xr-x 1 kaush 197609     0 Oct  4 00:14 .git
+-rwxr-xr-x 1 kaush 197609 47775 Oct  4 00:28 a.exe
+-rw-r--r-- 1 kaush 197609   130 Oct  4 00:26 brute.cpp
+-rwxr-xr-x 1 kaush 197609 47775 Oct  4 09:55 brute_executable.exe
+-rw-r--r-- 1 kaush 197609    13 Oct  4 00:27 brute_in.txt
+-rw-r--r-- 1 kaush 197609     8 Oct  4 09:55 brute_out.txt
+-rw-r--r-- 1 kaush 197609    66 Oct  4 09:43 difference.py
+-rw-r--r-- 1 kaush 197609     0 Oct  4 00:08 difflib.md
+-rw-r--r-- 1 kaush 197609  1098 Oct  4 10:10 f1.txt
+-rw-r--r-- 1 kaush 197609     9 Oct  4 09:56 f2.txt
+-rw-r--r-- 1 kaush 197609     4 Oct  4 00:27 input.txt
+-rw-r--r-- 1 kaush 197609   225 Oct  4 10:08 mapper.sh
+-rw-r--r-- 1 kaush 197609   132 Oct  4 00:27 optimal.cpp
+-rwxr-xr-x 1 kaush 197609 47775 Oct  4 09:55 optimal_executable.exe
+-rw-r--r-- 1 kaush 197609    10 Oct  4 09:55 optimal_out.txt
+-rw-r--r-- 1 kaush 197609     8 Oct  4 00:29 output.txt
+-rw-r--r-- 1 kaush 197609  1831 Oct  4 09:54 Plan.md
+-rw-r--r-- 1 kaush 197609     0 Oct  3 23:52 README.md
+-rw-r--r-- 1 kaush 197609     0 Oct  4 00:07 subproc.md
