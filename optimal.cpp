@@ -1,34 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef unsigned long long ull;
-
 #define int long long
 #define endl "\n"
 #define deb(x) cout << #x << " -> " << x << endl;
 #define print(x)                          \
     for (auto &x_ : x) cout << x_ << " "; \
     cout << endl;
-#define pb push_back
 #define all(x) x.begin(), x.end()
-#define prec(x, y) fixed << setprecision(y) << x
-
-/*
-Think of an easier solution because the problems you solve are always easy
--> Problems till Div-2 C are going to be ad-hoc
-Think of change occuring in window (K periodic)
-Binary Search
-Traverse the array in reverse and check if any idea works out
-*/
 
 void solve(int tc_count) {
     int n, x, p, k;
+    // ip : n, x, p, k
     cin >> n >> x >> p >> k;
-    --k;
-    --p;
 
-    vector<int> a(n);
-    for (auto &x : a) cin >> x;
+    vector<int> a(n + 1, 0);
+
+    // 1 based indexing
+    for (int i = 1; i <= n; ++i) cin >> a[i];
+
+    // sorting the vector
     sort(all(a));
 
     // aldeady present
@@ -37,43 +27,54 @@ void solve(int tc_count) {
         return;
     }
 
-    // p and k are same but pth element is not X
-    if (p == k) {
-        cout << "1\n";
-        return;
-    }
-
-    if (p < k) {
+    // changeable on the right => ability is to push the elements on the left
+    // towards p
+    if (p <= k) {
         if (a[p] < x) {
             cout << "-1\n";
             return;
         }
-    } else if (p > k) {
+
+        // replace a[k] with x
+
+        // find the index of first number greater than x on the left
+        int index = 0;
+        for (index = 1; index < p; ++index) {
+            if (a[index] > x) {
+                break;
+            }
+        }
+
+        cout << (p - index + 1) << endl;
+        return;
+    }
+
+    // changeable on the left => ability is to push the elements on the right
+    // towards p
+    if (p > k) {
         if (a[p] > x) {
             cout << "-1\n";
             return;
         }
-    }
 
-    int changes = 0;
-    while (changes <= n) {
-        if (a[p] == x) {
-            cout << changes << endl;
-            return;
+        // find the index of first element greater than x on right
+        int index = 0;
+        for (index = p + 1; index <= n; ++index) {
+            if (a[index] > x) {
+                break;
+            }
         }
-        a[k] = x;
-        sort(all(a));
 
-        changes++;
-    }
-    if (a[p] == x) {
-        cout << changes << endl;
+        cout << (index - p) << endl;
         return;
     }
-    return;
 }
 
 int32_t main() {
+    // #ifdef dark_angel
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
     ios::sync_with_stdio(0);
     cout.tie(0);
     cin.tie(0);
