@@ -2,8 +2,10 @@ g++ brute.cpp -o brute_executable
 g++ optimal.cpp -o optimal_executable
 
 n=$1
+echo $n
 for (( i=1; i<=n; ++i ))
 do
+    python testcase.py
     ./brute_executable < testcase.txt > brute_out.txt
     ./optimal_executable < testcase.txt > optimal_out.txt
     if [[ $(diff brute_out.txt optimal_out.txt) ]]
@@ -21,5 +23,6 @@ do
     fi
 done
 
+echo "--------------Testing done-----------"
 # ./brute_executable < testcase.txt > brute_out.txt
 # ./optimal_executable < testcase.txt > optimal_out.txt
