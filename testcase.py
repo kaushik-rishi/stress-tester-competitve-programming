@@ -2,7 +2,7 @@ import sys
 import os
 import random
 
-sys.stdout = open("testcase_peqk.txt", "w")
+sys.stdout = open("testcase.txt", "w")
 
 
 class RandomGenerator():
@@ -55,35 +55,12 @@ if __name__ == "__main__":
     t = 1000
     print(t)
     for __ in range(t):
-        # num_lim = 100
-        # n = 1
-        # x = 1
-        # p = 1
-        # k = 1
+        num_lim = 100
         # while n != 1:
-        #     n = rand.integer(2, 10)
-        #     x = rand.integer(1, num_lim)
-        #     p = rand.integer(2, n)
-        #     k = rand.integer(2, n)
-        #     if p == k:
-        #         k -= 1
-
-        # print(n, end=" ")
-        # print(x, end=" ")
-        # print(p, end=" ")
-        # print(k, end=" ")
-        # print()
-
-        # for ele in rand.array(n, 1, num_lim):
-        #     print(ele, end=" ")
-        # print()
-        num_lim = 1000
-
-        n = rand.integer(1, 30)
+        n = rand.integer(1, 100)
         x = rand.integer(1, num_lim)
         p = rand.integer(1, n)
-        # k = rand.integer(1, n)
-        k = p
+        k = rand.integer(1, n)
 
         print(n, end=" ")
         print(x, end=" ")
