@@ -51,7 +51,6 @@ if __name__ == "__main__":
     rand = RandomGenerator()
     lops = ListOperation()
 
-    # t = rand.integer(1, 30)
     t = 1000
     print(t)
     for __ in range(t):

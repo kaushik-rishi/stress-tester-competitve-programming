@@ -31,6 +31,11 @@ void solve(int tc_count) {
     for (auto &x : a) cin >> x;
     sort(all(a));
 
+    if (a[p] == x) {
+        cout << "0\n";
+        return;
+    }
+
     if (p < k) {
         if (a[p] < x) {
             cout << "-1\n";
