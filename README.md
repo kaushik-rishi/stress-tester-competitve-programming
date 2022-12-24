@@ -12,7 +12,9 @@ A stress testing application for competitve programming.
 
 ### Checklist:
 - [ ] Bring more improvement in the `diff` command's output
+  - [ ] There'a a package called `fast-diff` in npm, if we want to build the diffing service in node js.
 - [ ] Figure out a way to tell the line of the testcase of difference
+  - would be covered if we build the diffing service in nodejs/python (harder in bash)
 - [ ] Add error handling
 - [ ] Big: Make a GUI for this using `Tkinter` or `PyQt5` and add all the features.
 - [ ] After GUI: Make custom options for test cases with constrains and generate test cases from the users selection.
